@@ -1,0 +1,4 @@
+<p><%= comment.content %></p>
+<%= link_to 'Edit', edit_article_comment_path(comment.article, comment), class: "btn btn-success" %>
+<%= link_to 'Delete', article_comment_path(comment.article, comment), method: :delete, data:
+    {confirm: "Do you want to delete the comment"} %>

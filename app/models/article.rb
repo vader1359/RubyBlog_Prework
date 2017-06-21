@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
+  has_many :comments, dependent: :destroy
   def self.search(search)
-    where("title ILIKE ?", "%#{search}%")
+    where("title || body ILIKE ?", "%#{search}%")
   end
 end
