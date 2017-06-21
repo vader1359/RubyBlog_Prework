@@ -7,6 +7,12 @@ class ArticlesController < ApplicationController
     @articles = Article.all
     # NOTE: Don't understand, NEED LOOK BACK - What is the @Markdown here? a method?
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+
+    if params[:search]
+      @articles = Article.search(params[:search]).order("created_at DESC")
+    else
+      @articles = Article.all.order('created_at DESC')
+    end
   end
 
   # GET /articles/1
