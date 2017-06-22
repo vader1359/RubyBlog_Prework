@@ -9,9 +9,9 @@
 
 Submitted by: **Ian Tran**
 
-Time spent: **X** hours spent in total
+Time spent: **20** hours spent in total
 
-URL: **Insert your Heroku URL here**
+URL: **https://obscure-stream-16818.herokuapp.com/**
 
 ## User Stories
 
